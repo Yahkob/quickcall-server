@@ -23,7 +23,7 @@ exports.callSrcNum = function(req, res) {
     var params = {
         from: req.body.src,
         to: req.body.src,
-        answer_url: "http://quickcall-server.herokuapp.com/xml-response?dst=" + req.body.dst
+        answer_url: "quickcallserver.azurewebsites.net/xml-response?dst=" + req.body.dst
     };
     var p = initializePlivo(req);
     p.make_call(params, function(status, response) {
